@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "2888:2888"  # Maps host port 2888 to container port 2888
+    volumes:
+      - .:/usr/src/app  # Mounts the local directory for live updates
+      - /usr/src/app/node_modules  # Prevents overwriting node_modules
+    environment:
+      - NODE_ENV=production
+      - PORT=2888
+      - DOMAIN=https://bot.superbotauto.com
+      - REDIS_URL=redis://redis:6379  # Ensure this is correct
+    depends_on:
+      - redis
+    networks:
+      - mynetwork
+    restart: always  # Ensures the bot restarts if it crashes or the server reboots
+    command: ["nodemon", "src/app.js"]  # Enables live reload during development
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    networks:
+      - mynetwork
+    restart: always  # Ensures Redis restarts if it crashes
+
+networks:
+  mynetwork:
+    driver: bridge

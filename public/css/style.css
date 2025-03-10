@@ -1,0 +1,25 @@
+/* Apply this CSS to create a bounce effect on the last digit */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Bounce effect */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#bot-count span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#bot-count span.bounce {
+    animation: bounce 0.3s ease;
+    /* Trigger bounce animation */
+}
