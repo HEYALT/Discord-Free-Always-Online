@@ -14,7 +14,7 @@ This is the source code for **[online.superbotauto.com](https://online.superbota
 
 ## 🛠 Technology Used
 - **Frontend:** HTML, JavaScript
-- **Backend:** Node.js (Discord.js)
+- **Backend:** Node.js (Eris)
 - **Hosting:** Docker + Cloudflare
 
 ## 📜 License
