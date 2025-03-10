@@ -21,5 +21,9 @@ This is the source code for **[online.superbotauto.com](https://online.superbota
 This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ---
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Discord-Free-Always-Online/Discord-Free-Always-Online&type=Date)](https://star-history.com/#Discord-Free-Always-Online/Discord-Free-Always-Online&Date)
+---
 
 🌟 **Powered by Eclipse Interactive**
